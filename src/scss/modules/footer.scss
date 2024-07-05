@@ -1,0 +1,109 @@
+.footer {
+    background-color: #3D4050;
+
+    .footer__info {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: rem(30) 0;
+
+        >div {
+            display: flex;
+            position: relative;
+
+            &:not(:last-child) {
+                &::after {
+                    content: '';
+                    position: absolute;
+                    right: -40px;
+                    width: 1px;
+                    height: 18px;
+                    background-color: #C3C3C3;
+                }
+            }
+        }
+
+        .copyright {
+            font-size: 13px;
+            font-weight: 400;
+            line-height: 15.6px;
+
+            span {
+                text-transform: uppercase;
+            }
+        }
+
+        .payment {
+            column-gap: 38px;
+
+            .payment__item {
+                display: flex;
+                align-items: center;
+
+                p {
+                    color: #C3C3C3;
+                    font-size: 13px;
+                    line-height: 15.6px;
+                    margin-left: 10px;
+                }
+            }
+        }
+
+        .social {
+            column-gap: 38px;
+
+            .social__link {
+                display: flex;
+                align-items: center;
+
+                p {
+                    font-size: 13px;
+                    margin-left: 10px;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1368px) {
+    .footer {
+        .footer__info {
+            flex-wrap: wrap;
+            gap: 20px;
+
+            >div {
+                &::after {
+                    right: -20px;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 960px) {
+    .footer {
+        .footer__info {
+            >div {
+                &::after {
+                    display: none;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .footer {
+        .footer__info {
+            justify-content: center;
+        }
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .footer {
+        .footer__info {
+            flex-direction: column;
+        }
+    }
+}
